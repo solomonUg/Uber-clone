@@ -26,9 +26,9 @@ export default function Hero() {
           </div>
 
           <div className="w-[70%] flex flex-col gap-3 pt-12 ">
-            <div className="relative">
+            <div className="relative bg-gray-100 rounded-md">
               <input
-                className="outline-none px-8 h-12 bg-transparent bg-gray-100 text-black w-full focus:ring-2 focus:ring-black rounded-md"
+                className="outline-none px-8 h-12 bg-transparent  text-black w-full focus:ring-2 focus:ring-black rounded-md"
                 type="text"
                 placeholder="Pickup location"
               />
@@ -36,15 +36,17 @@ export default function Hero() {
                 <IoIosSend className="text-2xl cursor-pointer" />
               </div>
             </div>
+            <div className="bg-gray-100 rounded-md">
             <input
-              className="outline-none px-8 h-12 bg-gray-100 bg-transparent text-black w-full  focus:ring-2 focus:ring-black rounded-md"
+              className="outline-none px-8 h-12  bg-transparent text-black w-full  focus:ring-2 focus:ring-black rounded-md"
               type="text"
               placeholder="Dropoff location"
             />
+            </div>
             <div className="flex w-full  gap-3">
-              <div className="relative w-[48%]">
+              <div className="relative w-[48%] bg-gray-100 rounded-md">
                 <input
-                  className="outline-none w-[100%]  pl-8 h-12 bg-gray-100 bg-transparent text-black    focus:ring-2 focus:ring-black rounded-md "
+                  className="outline-none w-[100%]  pl-8 h-12 bg-transparent text-black    focus:ring-2 focus:ring-black rounded-md "
                   type="text"
                   placeholder="Today"
                 />
@@ -52,7 +54,7 @@ export default function Hero() {
               </div>
               <div className="relative w-[50%]">
               <input
-                className="outline-none  w-[100%] pl-8 h-12 bg-gray-100 bg-transparent text-black  focus:ring-2 focus:ring-black rounded-md"
+                className="outline-none  w-[100%] pl-8 h-12 bg-gray-100  text-black  focus:ring-2 focus:ring-black rounded-md"
                 type="text"
                 placeholder="Now"
               />
