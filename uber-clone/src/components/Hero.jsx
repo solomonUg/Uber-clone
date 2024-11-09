@@ -33,7 +33,7 @@ export default function Hero() {
                 placeholder="Pickup location"
               />
               <div className="absolute right-2 bottom-3">
-                <IoIosSend className="text-2xl" />
+                <IoIosSend className="text-2xl cursor-pointer" />
               </div>
             </div>
             <input
@@ -64,7 +64,7 @@ export default function Hero() {
           <Button label={"See prices"} className={"text-white bg-black px-7 py-3 rounded-xl font-medium hover:bg-opacity-75"} />
           </div>
         </div>
-        <div className="w-[50%] bg-blue-950 text-white"> Map section</div>
+        <div className="w-[50%] bg-blue-200 text-white"> Map section</div>
       </div>
     </section>
   );
