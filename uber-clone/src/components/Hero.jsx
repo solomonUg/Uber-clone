@@ -3,10 +3,14 @@ import { BiSolidPackage } from "react-icons/bi";
 import { IoIosSend } from "react-icons/io";
 import { FaCalendarDay } from "react-icons/fa6";
 import { BiSolidTime } from "react-icons/bi";
+import { FaCircle } from "react-icons/fa";
+import { FaSquareFull } from "react-icons/fa";
 import Button from "./Button";
 
 
+
 export default function Hero() {
+  
   return (
     <section className="w-full h-screen flex justify-center">
       <div className="w-[85%]  flex pt-20">
@@ -16,16 +20,16 @@ export default function Hero() {
           </h1>
           <div className="flex w-[30%] justify-between mt-2 ">
             <div className="flex flex-col  items-center">
-              <FaCar className="text-2xl " />{" "}
+              <FaCar className="text-2xl " />
               <div className="font-medium">Ride</div>
             </div>
             <div className="flex flex-col  items-center">
-              <BiSolidPackage className="text-2xl" />{" "}
+              <BiSolidPackage className="text-2xl" />
               <div className="font-medium">Package</div>
             </div>
           </div>
 
-          <div className="w-[70%] flex flex-col gap-3 pt-12 ">
+          <div className="w-[70%] flex flex-col gap-3 pt-12  relative bottom-4">
             <div className="relative bg-gray-100 rounded-md">
               <input
                 className="outline-none px-8 h-12 bg-transparent  text-black w-full focus:ring-2 focus:ring-black rounded-md"
@@ -35,13 +39,19 @@ export default function Hero() {
               <div className="absolute right-2 bottom-3">
                 <IoIosSend className="text-2xl cursor-pointer" />
               </div>
+              <div className="absolute top-5 left-2  ">
+              <FaCircle className="text-[9px]" />
+              </div>
             </div>
-            <div className="bg-gray-100 rounded-md">
+            <div className="bg-gray-100 rounded-md relative">
             <input
               className="outline-none px-8 h-12  bg-transparent text-black w-full  focus:ring-2 focus:ring-black rounded-md"
               type="text"
               placeholder="Dropoff location"
             />
+            <div className="absolute top-5 left-2 ">
+            <FaSquareFull className="text-[9px]" />
+            </div>
             </div>
             <div className="flex w-full  gap-3">
               <div className="relative w-[48%] bg-gray-100 rounded-md">
@@ -61,6 +71,7 @@ export default function Hero() {
               <BiSolidTime className="absolute bottom-4 left-2" />
               </div>
             </div>
+            <div className="w-[1px] h-11 bg-black absolute left-3 top-[80px]"></div>
           </div>
           <div className="pt-4">
           <Button label={"See prices"} className={"text-white bg-black px-7 py-3 rounded-xl font-medium hover:bg-opacity-75"} />
