@@ -6,10 +6,28 @@ import { BiSolidTime } from "react-icons/bi";
 import { FaCircle } from "react-icons/fa";
 import { FaSquareFull } from "react-icons/fa";
 import Button from "./Button";
+import { useState } from "react";
+import { MdCancel } from "react-icons/md";
+
 
 
 
 export default function Hero() {
+  const [pickUpLocation, setPickUp] = useState ("");
+
+  const [dropOffLocation, setDropOff] = useState("")
+
+
+  console.log(dropOffLocation);
+  
+  
+  function handleCancelPickUp(){
+    setPickUp("")
+  }
+
+  function CancelDropOff () {
+    setDropOff("")
+  }
   
   return (
     <section className="w-full h-screen flex justify-center">
@@ -35,9 +53,12 @@ export default function Hero() {
                 className="outline-none px-8 h-12 bg-transparent  text-black w-full focus:ring-2 focus:ring-black rounded-md"
                 type="text"
                 placeholder="Pickup location"
+                value={pickUpLocation}
+                onChange={(e)=>setPickUp(e.target.value)}
               />
               <div className="absolute right-2 bottom-3">
-                <IoIosSend className="text-2xl cursor-pointer" />
+                {pickUpLocation==""? <IoIosSend className="text-2xl cursor-pointer" />: <MdCancel className="text-xl" onClick={()=>handleCancelPickUp()} />}
+            
               </div>
               <div className="absolute top-5 left-2  ">
               <FaCircle className="text-[9px]" />
@@ -48,7 +69,12 @@ export default function Hero() {
               className="outline-none px-8 h-12  bg-transparent text-black w-full  focus:ring-2 focus:ring-black rounded-md"
               type="text"
               placeholder="Dropoff location"
+              value={dropOffLocation}
+              onChange={(e)=> setDropOff(e.target.value)}
             />
+            <div className="absolute right-2 top-[13px] ">
+            {dropOffLocation !==""? <MdCancel className="text-xl" onClick={()=>CancelDropOff()} />: ""}
+            </div>
             <div className="absolute top-5 left-2 ">
             <FaSquareFull className="text-[9px]" />
             </div>
@@ -77,7 +103,17 @@ export default function Hero() {
           <Button label={"See prices"} className={"text-white bg-black px-7 py-3 rounded-xl font-medium hover:bg-opacity-75"} />
           </div>
         </div>
-        <div className="w-[50%] bg-blue-200 text-white"> Map section</div>
+        <div className="w-[50%] bg-blue-200 text-white">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d56538.812290538015!2d-2.6254061869155163!3d7.4576745936347635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sgh!4v1730405724714!5m2!1sen!2sgh"
+            className="w-full border-4 border-black rounded-md shadow-3xl"
+            width="100%"
+            height="100%"
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
       </div>
     </section>
   );
