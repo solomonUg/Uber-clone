@@ -4,7 +4,12 @@ import Section from "./components/Section";
 import smallCar from "./assets/ride.png";
 import asset_1 from "./assets/earner-illustra.webp";
 import asset_2 from "./assets/u4b-square.webp"
+import BarcodeDownloadApp from "./components/BarcodeDownloadApp";
 const sectionBtn2Style = "text-black  border-b-[1px] pb-1 hover:border-black";
+import barcodeUberApp from "./assets/Final-Download-Uber-App.webp";
+import barcodeDriverApp from "./assets/QR_https___t.uber.com_download-driver-app.webp";
+
+
 
 function App() {
   return (
@@ -52,6 +57,15 @@ function App() {
         direction={"flex-row-reverse"}
         label={"Check out our solutions"}
       />
+      <section className="w-full h-full bg-[#f6f6f6] flex justify-center">
+        <div className="w-[85%] ">
+        <h2 className="text-4xl font-semibold my-12">It’s easier in the apps</h2>
+        <div className="flex justify-between mb-16 ">
+        <BarcodeDownloadApp barcode={barcodeUberApp} titleText="Download the Uber app" />
+        <BarcodeDownloadApp barcode={barcodeDriverApp} titleText="Download the Driver app"/>
+        </div>
+        </div>
+      </section>
       <footer className="bg-black text-white w-full h-full">Footer</footer>
     </div>
   );

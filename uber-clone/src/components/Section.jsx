@@ -25,11 +25,11 @@ export default function Section({
             <div className="flex gap-4 items-center">
               <Button
                 label={"Get Started"}
-                className={
+                style={
                   "text-white transition-all ease-in bg-black px-6 py-3 rounded-lg font-medium hover:bg-opacity-75"
                 }
               />
-              <Button label={label} className={alreadySignedButnStyle} />
+              <Button label={label} style={alreadySignedButnStyle} />
             </div>
           </div>
         </div>

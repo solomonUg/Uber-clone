@@ -1,8 +1,8 @@
-export default function Button({ label, className }) {
+export default function Button({ label, style }) {
   return (
     <button
       type="button"
-      className={className}
+      className={style}
     >
       {label}
     </button>

@@ -9,8 +9,7 @@ export default function (){
             <div className="flex w-[90%] justify-between items-center h-16 px-2" >
                 <div className=" text-white flex gap-8 justify-center items-center">
                     <h1 className="text-2xl">Uber</h1>
-                    <div >
-                        <ul className="flex">
+                        <ul className="hidden lg:flex">
                             <li className=" py-2 px-3 cursor-pointer rounded-full hover:bg-slate-900 ">Ride</li>
                             <li className=" py-2 px-3 cursor-pointer rounded-full hover:bg-slate-900 ">Drive</li>
                             <li className=" py-2 px-3 cursor-pointer rounded-full hover:bg-slate-900 ">Business</li>
@@ -18,13 +17,14 @@ export default function (){
                             <li className="flex items-center py-2 px-3 cursor-pointer rounded-full justify-center gap-1 hover:bg-gray-900">About <IoIosArrowDown /></li>
 
                         </ul>
-                    </div>
                 </div>
                 <div className="flex text-white gap-2">
-                    <div className="flex justify-center items-center gap-2 py-2 px-4 rounded-full hover:bg-slate-900 ">
+                    <div className="hidden lg:flex justify-center items-center gap-2 py-2 px-4 rounded-full hover:bg-slate-900 ">
                 <TbWorld /> <div>EN</div> 
                     </div>
+                    <div className="hidden lg:flex">
                     <button className=" py-2 px-4 rounded-full hover:bg-slate-900 ">Help</button>
+                    </div>
                     <button className=" py-2 px-4 rounded-full hover:bg-slate-900 ">Log in</button>
                     <button className="bg-white text-black text-center py-2 px-4 text-sm font-medium rounded-full hover:bg-gray-300">Sign Up</button>
                 </div>

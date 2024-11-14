@@ -30,13 +30,13 @@ export default function Hero() {
   }
   
   return (
-    <section className="w-full h-screen flex justify-center">
-      <div className="w-[85%]  flex pt-20">
-        <div className="w-[50%] ">
+    <section className="bg-black text-white w-full h-screen flex justify-center lg:bg-white lg:text-black">
+      <div className="w-[85%] flex  flex-col lg:flex-row pt-20 ">
+        <div className="w-full lg:w-[50%] ">
           <h1 className="text-[3rem] font-bold pr-20 ">
             Go anywhere with Uber
           </h1>
-          <div className="flex w-[30%] justify-between mt-2 ">
+          <div className="hidden lg:flex w-[30%] justify-between mt-2 ">
             <div className="flex flex-col  items-center">
               <FaCar className="text-2xl " />
               <div className="font-medium">Ride</div>
@@ -58,10 +58,9 @@ export default function Hero() {
               />
               <div className="absolute right-2 bottom-3">
                 {pickUpLocation==""? <IoIosSend className="text-2xl cursor-pointer" />: <MdCancel className="text-xl" onClick={()=>handleCancelPickUp()} />}
-            
               </div>
               <div className="absolute top-5 left-2  ">
-              <FaCircle className="text-[9px]" />
+              <FaCircle className="text-black lg:text-black text-[9px]" />
               </div>
             </div>
             <div className="bg-gray-100 rounded-md relative">
@@ -76,7 +75,7 @@ export default function Hero() {
             {dropOffLocation !==""? <MdCancel className="text-xl" onClick={()=>CancelDropOff()} />: ""}
             </div>
             <div className="absolute top-5 left-2 ">
-            <FaSquareFull className="text-[9px]" />
+            <FaSquareFull className="text-black lg:text-black text-[9px]" />
             </div>
             </div>
             <div className="flex w-full  gap-3">
@@ -97,13 +96,13 @@ export default function Hero() {
               <BiSolidTime className="absolute bottom-4 left-2" />
               </div>
             </div>
-            <div className="w-[1px] h-11 bg-black absolute left-3 top-[80px]"></div>
+            <div className="bg-white w-[1px] h-11 lg:bg-black absolute left-3 top-[80px]"></div>
           </div>
           <div className="pt-4">
-          <Button label={"See prices"} className={"text-white bg-black px-7 py-3 rounded-xl font-medium hover:bg-opacity-75"} />
+          <Button label={"See prices"} style={"text-black bg-white lg:text-white lg:bg-black px-7 py-3 rounded-xl font-medium hover:bg-opacity-75"} />
           </div>
         </div>
-        <div className="w-[50%] bg-blue-200 text-white">
+        <div className=" hidden lg:flex w-[50%] bg-blue-200 text-white">
         <iframe
             src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d56538.812290538015!2d-2.6254061869155163!3d7.4576745936347635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sgh!4v1730405724714!5m2!1sen!2sgh"
             className="w-full border-4 border-black rounded-md shadow-3xl"
