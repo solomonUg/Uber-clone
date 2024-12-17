@@ -103,7 +103,7 @@ export default function Hero() {
           <Button label={"See prices"} style={"text-black bg-white lg:text-white lg:bg-black px-7 py-3 rounded-xl font-medium hover:bg-opacity-75"} />
           </div>
         </div>
-        <div className=" hidden lg:flex w-[50%] bg-blue-200 text-white">
+        <div className=" hidden lg:flex w-[50%] h-screen bg-blue-200 text-white">
         <iframe
             src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d56538.812290538015!2d-2.6254061869155163!3d7.4576745936347635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sgh!4v1730405724714!5m2!1sen!2sgh"
             className="w-full border-4 border-black rounded-md shadow-3xl"
