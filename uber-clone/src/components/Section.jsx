@@ -26,7 +26,7 @@ export default function Section({
               <Button
                 label={"Get Started"}
                 style={
-                  "text-white transition-all ease-in bg-black px-6 py-3 rounded-lg font-medium hover:bg-opacity-75"
+                  "text-white transition-all text-base ease-in bg-black px-6 py-3 rounded-lg font-medium hover:bg-opacity-75"
                 }
               />
               <Button label={label} style={alreadySignedButnStyle} />
