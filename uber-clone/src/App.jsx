@@ -18,7 +18,7 @@ import appStoreAppleImg from "./assets/app-store-apple-f1f919205b.svg"
 
 
 
-const sectionBtn2Style = "text-black  border-b-[1px] pb-1 hover:border-black";
+const sectionBtn2Style = "text-black border-b-[1px] pb-1 hover:border-black";
 
 function App() {
   return (

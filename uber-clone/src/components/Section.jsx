@@ -22,11 +22,11 @@ export default function Section({
           <div>
             <h2 className={`font-bold text-4xl lg:text-6xl lg:font-medium ${opacity}`}>{title}</h2>
             <p className="my-9">{subtitle}</p>
-            <div className="flex gap-4 items-center">
+            <div className="flex flex-wrap gap-4 items-center">
               <Button
                 label={"Get Started"}
                 style={
-                  "text-white transition-all text-base ease-in bg-black px-6 py-3 rounded-lg font-medium hover:bg-opacity-75"
+                  "text-white transition-all ease-in bg-black px-6 py-3 rounded-lg font-medium hover:bg-opacity-75"
                 }
               />
               <Button label={label} style={alreadySignedButnStyle} />
