@@ -11,16 +11,16 @@ export default function Section({
   label,
 }) {
   return (
-    <section className="w-full h-full  flex justify-center my-32">
-      <div className={`w-[85%]  flex ${direction}`}>
-        <div className="w-[50%] h-full ">
+    <section className="w-full h-full  flex justify-center lg:my-32">
+      <div className={`w-[90%] sm:w-[85%]  flex  ${direction} `}>
+        <div className="w-[100%]  sm:w-[50%] h-full ">
           <img src={image} alt="man-driving" />
         </div>
         <div
-          className={`w-[50%] h-full flex items-center justify-center  ${padding_textArea}`}
+          className={`w-full my-6 sm:w-[50%] h-full flex items-center justify-center  ${padding_textArea}`}
         >
           <div>
-            <h2 className={`font-medium text-6xl  ${opacity}`}>{title}</h2>
+            <h2 className={`font-bold text-4xl lg:text-6xl lg:font-medium ${opacity}`}>{title}</h2>
             <p className="my-9">{subtitle}</p>
             <div className="flex gap-4 items-center">
               <Button

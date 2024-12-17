@@ -8,6 +8,7 @@ import { FaSquareFull } from "react-icons/fa";
 import Button from "./Button";
 import { useState } from "react";
 import { MdCancel } from "react-icons/md";
+import rideUberImg from "../assets/Ride-with-Uber.webp"
 
 
 
@@ -30,10 +31,10 @@ export default function Hero() {
   }
   
   return (
-    <section className="bg-black text-white w-full h-screen flex justify-center lg:bg-white lg:text-black">
-      <div className="w-[85%] flex  flex-col lg:flex-row pt-20 ">
+    <section className="bg-black text-white w-full flex justify-center lg:bg-white lg:text-black">
+      <div className="w-[90%] lg:w-[85%] flex  flex-col lg:flex-row pt-20">
         <div className="w-full lg:w-[50%] ">
-          <h1 className="text-[3rem] font-bold pr-20 ">
+          <h1 className="text-[2.2rem] lg:text-[3rem] font-bold lg:pr-20 ">
             Go anywhere with Uber
           </h1>
           <div className="hidden lg:flex w-[30%] justify-between mt-2 ">
@@ -47,7 +48,7 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="w-[70%] flex flex-col gap-3 pt-12  relative bottom-4">
+          <div className="w-full  lg:w-[70%] flex flex-col gap-3 pt-12  relative bottom-4">
             <div className="relative bg-gray-100 rounded-md">
               <input
                 className="outline-none px-8 h-12 bg-transparent  text-black w-full focus:ring-2 focus:ring-black rounded-md"
@@ -57,7 +58,7 @@ export default function Hero() {
                 onChange={(e)=>setPickUp(e.target.value)}
               />
               <div className="absolute right-2 bottom-3">
-                {pickUpLocation==""? <IoIosSend className="text-2xl cursor-pointer" />: <MdCancel className="text-xl" onClick={()=>handleCancelPickUp()} />}
+                {pickUpLocation==""? <IoIosSend className=" text-black text-2xl cursor-pointer" />: <MdCancel className="text-xl" onClick={()=>handleCancelPickUp()} />}
               </div>
               <div className="absolute top-5 left-2  ">
               <FaCircle className="text-black lg:text-black text-[9px]" />
@@ -78,7 +79,7 @@ export default function Hero() {
             <FaSquareFull className="text-black lg:text-black text-[9px]" />
             </div>
             </div>
-            <div className="flex w-full  gap-3">
+            <div className="hidden lg:flex w-full  gap-3">
               <div className="relative w-[48%] bg-gray-100 rounded-md">
                 <input
                   className="outline-none w-[100%]  pl-8 h-12 bg-transparent text-black    focus:ring-2 focus:ring-black rounded-md "
@@ -112,6 +113,9 @@ export default function Hero() {
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
+        </div>
+        <div className="my-16 lg:hidden">
+          <img src={rideUberImg} alt="Ride with Uber" />
         </div>
       </div>
     </section>
